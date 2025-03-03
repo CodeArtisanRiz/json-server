@@ -87,5 +87,48 @@ Examples:
 - Next 5 employees: `/employees?_page=2&_limit=5`
 - Combine with sorting: `/employees?_sort=name&_page=1&_limit=5`
 
+## Operators and Search
+
+### Operators
+You can use various operators for advanced filtering:
+
+- Greater than: `/employees?id_gte=2`
+- Less than: `/employees?id_lte=5`
+- Not equal: `/employees?department_ne=IT`
+- Like: `/employees?name_like=John`
+- Regular expression: `/employees?name_like=^E`
+
+### Full-text Search
+Use `q` parameter for full-text search across all fields:
+
+- Search across all fields: `/employees?q=John`
+- Combine with filters: `/employees?q=John&department=IT`
+- Combine with pagination: `/employees?q=John&_page=1&_limit=5`
+
+### Multiple Conditions
+You can combine multiple conditions:
+
+- AND condition: `/employees?department=IT&name_like=John`
+- Multiple values: `/employees?department=IT&department=HR`
+
+## Relationships
+You can access related resources using the following endpoints:
+
+### Get Departments with Employees
+```
+GET http://localhost:4000/departments?_embed=employees
+```
+```
+{
+  "id": 1,
+  "uid": "UID001",
+  "name": "Employee 1",
+  "photo": "https://loremflickr.com/640/480",
+  "mobile": "123-456-7890",
+  "department": "HR"
+},
+...
+```
+
 ## Contributing
 Feel free to submit issues and enhancement requests.

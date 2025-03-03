@@ -1,44 +1,66 @@
 {
-    "employees": [
-      {
-        "id": 1,
-        "uid": "UID001",
-        "name": "Employee 1",
-        "photo": "https://loremflickr.com/640/480",
-        "mobile": "123-456-7890",
-        "department": "HR"
-      },
-      {
-        "id": 2,
-        "uid": "UID002",
-        "name": "Employee 2",
-        "photo": "https://loremflickr.com/640/480",
-        "mobile": "123-456-7891",
-        "department": "Finance"
-      },
-      {
-        "id": 3,
-        "uid": "UID003",
-        "name": "Employee 3",
-        "photo": "https://loremflickr.com/640/480",
-        "mobile": "123-456-7892",
-        "department": "IT"
-      },
-      {
-        "id": 4,
-        "uid": "UID004",
-        "name": "Employee 4",
-        "photo": "https://loremflickr.com/640/480",
-        "mobile": "123-456-7893",
-        "department": "Marketing"
-      },
-      {
-        "id": 5,
-        "uid": "UID005",
-        "name": "Employee 5",
-        "photo": "https://loremflickr.com/640/480",
-        "mobile": "123-456-7894",
-        "department": "Sales"
-      }
-    ]
-  }
+  "employees": [
+    {
+      "id": 1,
+      "uid": "UID065",
+      "name": "Employee 1",
+      "photo": "https://loremflickr.com/640/480",
+      "mobile": "123-456-7890",
+      "departmentId": 1
+    },
+    {
+      "id": 2,
+      "uid": "UID034",
+      "name": "Employee 2",
+      "photo": "https://loremflickr.com/640/480",
+      "mobile": "123-456-7891",
+      "departmentId": 2
+    },
+    {
+      "id": 3,
+      "uid": "UID041",
+      "name": "Employee 3",
+      "photo": "https://loremflickr.com/640/480",
+      "mobile": "123-456-7892",
+      "departmentId": 3
+    },
+    {
+      "id": 4,
+      "uid": "UID004",
+      "name": "Employee 4",
+      "photo": "https://loremflickr.com/640/480",
+      "mobile": "123-456-7893",
+      "departmentId": 4
+    },
+    {
+      "id": 5,
+      "uid": "UID074",
+      "name": "Employee 5",
+      "photo": "https://loremflickr.com/640/480",
+      "mobile": "123-456-7894",
+      "departmentId": 5
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "HR"
+    },
+    {
+      "id": 2,
+      "name": "Finance"
+    },
+    {
+      "id": 3,
+      "name": "IT"
+    },
+    {
+      "id": 4,
+      "name": "Marketing"
+    },
+    {
+      "id": 5,
+      "name": "Sales"
+    }
+  ]
+}
