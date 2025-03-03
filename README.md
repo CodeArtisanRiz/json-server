@@ -55,6 +55,7 @@ GET http://localhost:4000/employees/1
   "department": "HR"
 }
 ```
+
 ## Available Filters
 You can filter the employees using various query parameters:
 
@@ -62,5 +63,29 @@ You can filter the employees using various query parameters:
 - By ID: /employees?id=1
 - By UID: /employees?uid=UID001
 - Search by Name: /employees?name_like=Employee
+
+## Sorting
+You can sort the results using the `_sort` parameter:
+
+- Sort by UID: `/employees?_sort=uid`
+- Sort by name: `/employees?_sort=name`
+- Sort by department: `/employees?_sort=department`
+
+You can also specify the order:
+- Ascending (default): `/employees?_sort=uid`
+- Descending: `/employees?_sort=uid&_order=desc`
+
+## Pagination
+You can paginate the results using `_page` and `_limit` parameters:
+
+- Limit results per page: `/employees?_limit=5`
+- Get specific page: `/employees?_page=2&_limit=5`
+- Get total count in response headers: Response includes `X-Total-Count`
+
+Examples:
+- First 5 employees: `/employees?_page=1&_limit=5`
+- Next 5 employees: `/employees?_page=2&_limit=5`
+- Combine with sorting: `/employees?_sort=name&_page=1&_limit=5`
+
 ## Contributing
 Feel free to submit issues and enhancement requests.
